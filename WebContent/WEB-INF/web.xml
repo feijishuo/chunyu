@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>store</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 测试Servlet -->
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>cx.studio.store.test.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 后台首页 -->
+  <servlet>
+    <servlet-name>BIndexServlet</servlet-name>
+    <servlet-class>cx.studio.store.backstage.servlet.IndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BIndexServlet</servlet-name>
+    <url-pattern>/backstage/index/top</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BIndexServlet</servlet-name>
+    <url-pattern>/backstage/index/menu</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BIndexServlet</servlet-name>
+    <url-pattern>/backstage/index/main</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 后台商品总览管理 -->
+  <servlet>
+    <servlet-name>GoodsServlet</servlet-name>
+    <servlet-class>cx.studio.store.backstage.servlet.GoodsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoodsServlet</servlet-name>
+    <url-pattern>/backstage/goods/index</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>GoodsServlet</servlet-name>
+    <url-pattern>/backstage/goods/addInput</url-pattern>
+  </servlet-mapping>
+</web-app>
